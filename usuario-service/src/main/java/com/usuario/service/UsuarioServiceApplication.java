@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients //Para comunicar los microservicios con FeignClient
 @SpringBootApplication
-@EnableEurekaClient
+@EnableEurekaClient //Para que se registre en el servidor de eureka como cliente
 public class UsuarioServiceApplication {
 
 	public static void main(String[] args) {

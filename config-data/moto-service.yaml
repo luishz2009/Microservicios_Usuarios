@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: ${PORT:${SERVER_PORT:0}} #8083 para múltiples instancias colocamos puerto 0 para que busque el 1° puerto que no esté en uso
 eureka:
   client:
     fetch-registry: true
@@ -7,4 +7,5 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
     instance:
-      hostname: localhost
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      #hostname: localhost
