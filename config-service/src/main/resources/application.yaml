@@ -5,10 +5,11 @@ spring:
     config:
       server:      
         git:
-          default-label: gateway
+          default-label: circuit-breaker
           uri: https://github.com/luishz2009/Microservicios_Usuarios.git
           search-paths: config-data
   application:
     name: config-service
     #Primero trabajamos con la rama dev, luego con eureka y ahora con la rama multiple-instances
     #Después de multiple-instances vamos a trabajar con la rama geteway
+    #Por último vamos a trabajar con la rama circuit-breaker
