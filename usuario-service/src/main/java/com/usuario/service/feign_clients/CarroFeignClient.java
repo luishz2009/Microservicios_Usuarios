@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "carro-service", url = "http://localhost:8082")
+//@FeignClient(name = "carro-service", url = "http://localhost:8082")
+@FeignClient(name = "carro-service") //Para que funcione con gateway
 @RequestMapping("/carro")
 public interface CarroFeignClient {
     @PostMapping()
